@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Atividade de Javascript</title>
+    <link rel="icon" type="image/x-icon" href="./butterfly.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Atividade de Javascript</h1>
+   
+  <div id="cards"></div>
+<script>
+  const usuarios = [
+{id: 1, nome: "Leanne Grahann ", email: "Sincere@april.biz", address: {city: "Gwenbosddsfrough"}, company: {name: "Romaguera-Crona"}},
+{id: 2, nome: "Ervin Howell ", email: "Shanna@melissa.tv", address: {city: "Wisoky"}, company: {name: "Deck"}},
+{id: 3, nome: "teste2 ", email: "leanne.gsddfsfdsrahann@gmail.com", address: {city: "Gwensdffdborough"}, company: {name: "asdasfdsfsf-Crona"}},
+{id: 4, nome: "teste3 ", email: "leanne.grsdasdahann@gmail.com", address: {city: "aaaaaaaaaaaaaaaa"}, company: {name: "Romaguera-Crona"}},
+    ]
+    
+  const container = document.getElementById("cards");
+
+    usuarios.forEach(usuarios => {
+      const card = document.createElement("div");
+      card.classList.add("card");
+
+      card.innerHTML = `
+        <h3>${usuarios.nome}</h3>
+        <p>Email: ${usuarios.email}</p>
+        <p>Cidade: ${usuarios.address.city}</p>
+        <p>Empresa: ${usuarios.company.name}</p>
+      `;
+
+      container.appendChild(card);
+
+    
+          });
+            const total = usuarios.length;
+      const totalElement = document.createElement("p"); 
+    totalElement.textContent = `Total de usuários: ${total}`;
+    document.body.appendChild(totalElement);
+ </script>
+    
+    <a href="https://www.flaticon.com/free-icons/butterfly" title="butterfly icons">Butterfly icons created by justicon - Flaticon</a>
+</body>
+</html>

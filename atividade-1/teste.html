@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Cards Dinâmicos</title>
+
+  <style>
+    #cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .card {
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background-color: #f9f9f9;
+      width: 200px;
+    }
+
+    .card h3 {
+      margin-top: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="cards"></div>
+
+  <script>
+    const dados = [
+      { id: 1, nome: "Produto 1", preco: 50 },
+      { id: 2, nome: "Produto 2", preco: 80 },
+      { id: 3, nome: "Produto 3", preco: 120 }
+    ];
+
+    const container = document.getElementById("cards");
+
+    dados.forEach(item => {
+      const card = document.createElement("div");
+      card.classList.add("card");
+
+      card.innerHTML = `
+        <h3>${item.nome}</h3>
+        <p>ID: ${item.id}</p>
+        <p>Preço: R$ ${item.preco}</p>
+      `;
+
+      container.appendChild(card);
+    });
+  </script>
+
+</body>
+</html>
