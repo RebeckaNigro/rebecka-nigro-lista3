@@ -1,0 +1,19 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  max-width: 600px;
+}
+
+label,
+select {
+  display: block;
+  margin-top: 10px;
+}
+
+select {
+  padding: 8px;
+  width: 100%;
+}
+
+
+
